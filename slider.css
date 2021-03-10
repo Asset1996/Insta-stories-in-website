@@ -1,0 +1,83 @@
+/* Ограничивающая оболочка */ 
+.slick-list {
+    overflow: hidden; /*Скрываем все что находится за пределами данного ЭЛЕМЕНТА блока*/
+    height: 100%;
+} 
+/* Лента слайдов */ 
+.slick-track{
+    display: flex;
+    height: 100%;
+}
+/* Точки (булиты) */ 
+
+.slider_insta .slick-dots {
+  position: absolute;
+  top: -5px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none; 
+  text-align: center;
+  border: none;
+}
+.slider_insta .slick-dots li{
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+  z-index: 11;
+  background: url('1.png');
+}
+
+.slider_insta .slick-dots li button{
+  border: none;
+  font-size: 0;
+  background: url('1.png');
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 25px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
+
+@media (min-width: 1200px) {}
+@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 577px) and (max-width: 767px) {}
+@media (max-width: 576px) {}
